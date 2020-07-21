@@ -18,13 +18,14 @@ function rspMain(user) {
     }
     rounds.innerHTML = `${count} / ${maxRound}`
     let comp = Math.floor(Math.random() * 3)
+    history.innerHTML += `${rspStr(user)}<sup>(user)</sup> vs <br>${rspStr(comp)}<sup>(comp)</sup> : `
     if (user == comp) {
-        history.innerHTML += `${rspStr(user)}<sup>(user)</sup> vs <br>${rspStr(comp)}<sup>(comp)</sup> : DRAW<br>`
+        history.innerHTML += `DRAW<br>`
     } else if ((user == 0 && comp == 1) || (user == 1 && comp == 2) || (user == 2 && comp == 0)) {
-        history.innerHTML += `${rspStr(user)}<sup>(user)</sup> vs <br>${rspStr(comp)}<sup>(comp)</sup> : You Win!<br>`
+        history.innerHTML += `You Win!<br>`
         userWin++
     } else {
-        history.innerHTML += `${rspStr(user)}<sup>(user)</sup> vs <br>${rspStr(comp)}<sup>(comp)</sup> : Yow Lose!<br>`
+        history.innerHTML += `Yow Lose!<br>`
         compWin++
     }
     result.innerHTML = `${userWin}:${compWin}`
