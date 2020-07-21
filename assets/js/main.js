@@ -4,12 +4,11 @@ const result = document.getElementById("result")
 const history = document.getElementById("history")
 let maxRound = 20
 let count = 1
-let end = false
 let userWin = 0
 let compWin = 0
 
 function rspMain(user) {
-    if (end == true || count > maxRound) {
+    if (count > maxRound) {
         return
     }
     if (roundsChoice.style.display != "none") {
