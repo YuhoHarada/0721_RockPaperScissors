@@ -14,11 +14,10 @@ function rspMain(user) {
     if (roundsChoice.style.display != "none") {
         roundsChoice.style.display = "none"
         maxRound = roundsChoice.round.value
-        history.innerHTML = ""
     }
     rounds.innerHTML = `${count} / ${maxRound}`
     let comp = Math.floor(Math.random() * 3)
-    history.innerHTML += `${rspStr(user)}<sup>(user)</sup> vs <br>${rspStr(comp)}<sup>(comp)</sup> : `
+    history.innerHTML += `<br>${rspStr(user)}<sup>(user)</sup> vs <br>${rspStr(comp)}<sup>(comp)</sup> : `
     if (user == comp) {
         history.innerHTML += `DRAW<br>`
     } else if ((user == 0 && comp == 1) || (user == 1 && comp == 2) || (user == 2 && comp == 0)) {
