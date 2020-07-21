@@ -24,7 +24,7 @@ function rspMain(user) {
         history.innerHTML += `You Win!<br>`
         userWin++
     } else {
-        history.innerHTML += `Yow Lose!<br>`
+        history.innerHTML += `You Lose!<br>`
         compWin++
     }
     result.innerHTML = `${userWin}:${compWin}`
@@ -34,7 +34,7 @@ function rspMain(user) {
         } else if (userWin > compWin) {
             history.innerHTML += `<span class="youWin">GAME END! You Win!!</span>`
         } else {
-            history.innerHTML += `<span class="youLose">GAME END! Yow Lose!!</span>`
+            history.innerHTML += `<span class="youLose">GAME END! You Lose!!</span>`
         } 
     }
     history.scrollTop = history.scrollHeight
