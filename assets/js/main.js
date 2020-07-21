@@ -8,18 +8,6 @@ let end = false
 let userWin = 0
 let compWin = 0
 
-function rock() {
-    rspMain(0)
-}
-
-function scissors() {
-    rspMain(1)
-}
-
-function paper() {
-    rspMain(2)
-}
-
 function rspMain(user) {
     if (end == true || count > maxRound) {
         return
